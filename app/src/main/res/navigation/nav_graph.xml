@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/preLogin1">
+
+    <fragment
+        android:id="@+id/preLogin1"
+        android:name="com.example.proyectoandroid.PreLogin1"
+        android:label="fragment_pre_login1"
+        tools:layout="@layout/fragment_pre_login1" >
+        <action
+            android:id="@+id/action_preLogin1_to_preLogin22"
+            app:destination="@id/preLogin2" />
+    </fragment>
+    <fragment
+        android:id="@+id/preLogin2"
+        android:name="com.example.proyectoandroid.PreLogin2"
+        android:label="fragment_pre_login2"
+        tools:layout="@layout/fragment_pre_login2" >
+        <action
+            android:id="@+id/action_preLogin2_to_preLogin3"
+            app:destination="@id/preLogin3" />
+    </fragment>
+    <fragment
+        android:id="@+id/preLogin3"
+        android:name="com.example.proyectoandroid.PreLogin3"
+        android:label="fragment_pre_login3"
+        tools:layout="@layout/fragment_pre_login3" >
+        <action
+            android:id="@+id/action_preLogin3_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.proyectoandroid.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>
