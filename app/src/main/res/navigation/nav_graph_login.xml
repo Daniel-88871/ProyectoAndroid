@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
+    android:id="@+id/nav_graph_login"
     app:startDestination="@id/preLogin1">
 
     <fragment
@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_pre_login1" >
         <action
             android:id="@+id/action_preLogin1_to_preLogin22"
-            app:destination="@id/preLogin2" />
+            app:destination="@id/preLogin2"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
     </fragment>
     <fragment
         android:id="@+id/preLogin2"
@@ -21,7 +23,9 @@
         tools:layout="@layout/fragment_pre_login2" >
         <action
             android:id="@+id/action_preLogin2_to_preLogin3"
-            app:destination="@id/preLogin3" />
+            app:destination="@id/preLogin3"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
     </fragment>
     <fragment
         android:id="@+id/preLogin3"
@@ -30,7 +34,9 @@
         tools:layout="@layout/fragment_pre_login3" >
         <action
             android:id="@+id/action_preLogin3_to_login"
-            app:destination="@id/login" />
+            app:destination="@id/login"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
     </fragment>
     <fragment
         android:id="@+id/login"

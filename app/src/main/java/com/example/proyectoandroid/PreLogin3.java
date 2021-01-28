@@ -55,13 +55,12 @@ public class PreLogin3 extends Fragment {
             public void run() {
                 try {
                     // simular la carga de recursos
-                    Thread.sleep(2500);
+                    Thread.sleep(2300);
                     finishedLoading.postValue(true);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         });
-
     }
 }
