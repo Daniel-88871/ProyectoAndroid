@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph_login"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/preLogin1">
 
     <fragment
@@ -42,5 +42,26 @@
         android:id="@+id/login"
         android:name="com.example.proyectoandroid.Login"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_crearCuenta"
+            app:destination="@id/crearCuenta" />
+        <action
+            android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearCuenta"
+        android:name="com.example.proyectoandroid.CrearCuenta"
+        android:label="fragment_crear_cuenta"
+        tools:layout="@layout/fragment_crear_cuenta" >
+        <action
+            android:id="@+id/action_crearCuenta_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.proyectoandroid.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
 </navigation>

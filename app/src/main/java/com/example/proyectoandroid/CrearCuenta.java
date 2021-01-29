@@ -18,16 +18,15 @@ import android.widget.Button;
  * Use the  factory method to
  * create an instance of this fragment.
  */
-public class Login extends Fragment {
+public class CrearCuenta extends Fragment {
 
-    Button botoncrearcuenta;
-    Button botonlogin;
+    Button botoncrear;
     NavController navController;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_login, container, false);
+        return inflater.inflate(R.layout.fragment_crear_cuenta, container, false);
     }
 
     @Override
@@ -36,22 +35,12 @@ public class Login extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        botoncrearcuenta = view.findViewById(R.id.botoncrearcuenta);
+        botoncrear = view.findViewById(R.id.botoncrear);
 
-        botoncrearcuenta.setOnClickListener(new View.OnClickListener() {
+        botoncrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_login_to_crearCuenta);
-            }
-        });
-        navController = Navigation.findNavController(view);
-
-        botonlogin = view.findViewById(R.id.botonlogin);
-
-        botonlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_login_to_menu);
+                navController.navigate(R.id.action_crearCuenta_to_menu);
             }
         });
     }
