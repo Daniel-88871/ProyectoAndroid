@@ -63,5 +63,14 @@
         android:id="@+id/menu"
         android:name="com.example.proyectoandroid.Menu"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_guiaEjercicios"
+            app:destination="@id/guiaEjercicios" />
+    </fragment>
+    <fragment
+        android:id="@+id/guiaEjercicios"
+        android:name="com.example.proyectoandroid.GuiaEjercicios"
+        android:label="fragment_guia_ejercicios"
+        tools:layout="@layout/fragment_guia_ejercicios" />
 </navigation>
